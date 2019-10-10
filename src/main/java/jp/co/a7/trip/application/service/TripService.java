@@ -33,4 +33,13 @@ public class TripService {
         return tripListReturn;
     }
 
+    public int updateTrip(TripInfo tripInfo) {
+        Trip trip = new Trip();
+        BeanUtils.copyProperties(tripInfo, trip);
+
+        int res = tripMapper.updateTrip(trip);
+
+        return res;
+    }
+
 }
