@@ -1,11 +1,14 @@
 package jp.co.a7.trip.application.service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import jp.co.a7.trip.application.body.response.TripInfo;
 import jp.co.a7.trip.application.model.mapper.TripMapper;
@@ -37,8 +40,21 @@ public class TripService {
         Trip trip = new Trip();
         BeanUtils.copyProperties(tripInfo, trip);
 
-        int res = tripMapper.updateTrip(trip);
-
+        int res = -1;
+        String curTime = LocalDateTime.now().toString();
+        if (StringUtils.isEmpty(trip.getUuid())) {
+            
+            trip.setUuid(UUID.randomUUID().toString());
+            trip.setCreatedUserId("TESTUSER1001");
+            trip.setCreatedDatetime(curTime);
+            trip.setUpdatedUserId("TESTUSER1001");
+            trip.setUpdatedDatetime(curTime);
+             res = tripMapper.insertTrip(trip);
+        }else {
+             res = tripMapper.updateTrip(trip);
+             trip.setUpdatedUserId("TESTUSER1001");
+             trip.setUpdatedDatetime(curTime);
+        }
         return res;
     }
 
