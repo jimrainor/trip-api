@@ -3,8 +3,8 @@ package jp.co.a7.trip.application.body.response;
 public class TripInfo {
 
     private String uuid;
-    private String startdate;
-    private String enddate;
+    private String startDate;
+    private String endDate;
     private String costmoney;
     private String placename;
     private String hotel;
@@ -25,29 +25,17 @@ public class TripInfo {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
-    /**
-     * @return startdate
-     */
-    public String getStartdate() {
-        return startdate;
+    public String getStartDate() {
+        return startDate;
     }
-    /**
-     * @param startdate セットする startdate
-     */
-    public void setStartdate(String startdate) {
-        this.startdate = startdate;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
-    /**
-     * @return enddate
-     */
-    public String getEnddate() {
-        return enddate;
+    public String getEndDate() {
+        return endDate;
     }
-    /**
-     * @param enddate セットする enddate
-     */
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
     /**
      * @return costmoney
