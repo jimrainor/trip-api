@@ -22,10 +22,10 @@ public interface TripMapper {
             + ",placename = #{trip.placename}"
             + ",hotel     = #{trip.hotel}"
             + ",menber    = #{trip.menber}"
-            + ",created_user_id  = #{trip.created_user_id}"
-            + ",created_datetime = #{trip.created_datetime}"
-            + ",updated_user_id  = #{trip.updated_user_id}"
-            + ",updated_datetime = #{trip.updated_datetime}"
+            + ",created_user_id  = #{trip.createdUserId}"
+            + ",created_datetime = #{trip.createdDatetime}"
+            + ",updated_user_id  = #{trip.updatedUserId}"
+            + ",updated_datetime = #{trip.updatedDatetime}"
             + " where uuid = #{trip.uuid}")
     public int updateTrip(@Param(value = "trip") Trip trip);
 }

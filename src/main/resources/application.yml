@@ -9,3 +9,17 @@ spring:
    username: postgres
    password: noah2001
    driverClassName: org.postgresql.Driver
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
+log4j:
+  logger:
+    jp:
+      co:
+        a7:
+          trip:
+            application:
+              model: 
+                mapper: DEBUG
