@@ -29,13 +29,13 @@ public interface TripMapper {
             + ",updated_datetime = #{trip.updatedDatetime}"
             + " where uuid = #{trip.uuid}")
     public int updateTrip(@Param(value = "trip") Trip trip);
-    
+
     @Insert ("INSERT INTO public.trip_detail("
             + " uuid, startdate, enddate, costmoney"
             + ",placename, hotel, menber, created_user_id, "
             + "created_datetime, updated_user_id, updated_datetime)"
             + " VALUES (#{trip.uuid}, #{trip.startdate}, #{trip.enddate}, #{trip.costmoney}"
-            + ", #{trip.placename}, #{trip.hotel}, #{trip.menber}, #{trip.created_user_id}"
-            + ", #{trip.created_datetime}, #{trip.updated_user_id}, #{trip.updated_datetime});")
+            + ", #{trip.placename}, #{trip.hotel}, #{trip.menber}, #{trip.createdUserId}"
+            + ", #{trip.createdDatetime}, #{trip.updatedUserId}, #{trip.updatedDatetime});")
     public int insertTrip(@Param(value = "trip") Trip trip);
 }

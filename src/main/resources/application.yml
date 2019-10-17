@@ -13,7 +13,7 @@ spring:
 logging:
   level:
     org:
-      springframework: DEBUG
+      springframework: ERROR
 log4j:
   logger:
     jp:
@@ -23,3 +23,8 @@ log4j:
             application:
               model: 
                 mapper: DEBUG
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+                

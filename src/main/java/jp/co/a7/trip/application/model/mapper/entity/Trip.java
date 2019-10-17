@@ -1,18 +1,20 @@
 package jp.co.a7.trip.application.model.mapper.entity;
 
+import java.util.Date;
+
 public class Trip {
 
     private String uuid;
-    private String startDate;
-    private String endDate;
+    private String startdate;
+    private String enddate;
     private String costmoney;
     private String placename;
     private String hotel;
     private String menber;
     private String createdUserId;
-    private String createdDatetime;
+    private Date createdDatetime;
     private String updatedUserId;
-    private String updatedDatetime;
+    private Date updatedDatetime;
     /**
      * @return uuid
      */
@@ -25,17 +27,30 @@ public class Trip {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
-    public String getStartDate() {
-        return startDate;
+
+    /**
+     * @return startdate
+     */
+    public String getStartdate() {
+        return startdate;
     }
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    /**
+     * @param startdate セットする startdate
+     */
+    public void setStartdate(String startdate) {
+        this.startdate = startdate;
     }
-    public String getEndDate() {
-        return endDate;
+    /**
+     * @return enddate
+     */
+    public String getEnddate() {
+        return enddate;
     }
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    /**
+     * @param enddate セットする enddate
+     */
+    public void setEnddate(String enddate) {
+        this.enddate = enddate;
     }
     /**
      * @return costmoney
@@ -85,52 +100,28 @@ public class Trip {
     public void setMenber(String menber) {
         this.menber = menber;
     }
-    /**
-     * @return createdUserId
-     */
     public String getCreatedUserId() {
         return createdUserId;
     }
-    /**
-     * @param createdUserId セットする createdUserId
-     */
     public void setCreatedUserId(String createdUserId) {
         this.createdUserId = createdUserId;
     }
-    /**
-     * @return createdDatetime
-     */
-    public String getCreatedDatetime() {
+    public Date getCreatedDatetime() {
         return createdDatetime;
     }
-    /**
-     * @param createdDatetime セットする createdDatetime
-     */
-    public void setCreatedDatetime(String createdDatetime) {
+    public void setCreatedDatetime(Date createdDatetime) {
         this.createdDatetime = createdDatetime;
     }
-    /**
-     * @return updatedUserId
-     */
     public String getUpdatedUserId() {
         return updatedUserId;
     }
-    /**
-     * @param updatedUserId セットする updatedUserId
-     */
     public void setUpdatedUserId(String updatedUserId) {
         this.updatedUserId = updatedUserId;
     }
-    /**
-     * @return updatedDatetime
-     */
-    public String getUpdatedDatetime() {
+    public Date getUpdatedDatetime() {
         return updatedDatetime;
     }
-    /**
-     * @param updatedDatetime セットする updatedDatetime
-     */
-    public void setUpdatedDatetime(String updatedDatetime) {
+    public void setUpdatedDatetime(Date updatedDatetime) {
         this.updatedDatetime = updatedDatetime;
     }
 

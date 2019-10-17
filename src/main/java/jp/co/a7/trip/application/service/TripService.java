@@ -1,7 +1,7 @@
 package jp.co.a7.trip.application.service;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -41,10 +41,10 @@ public class TripService {
         BeanUtils.copyProperties(tripInfo, trip);
 
         int res = -1;
-        String curTime = LocalDateTime.now().toString();
+        Date curTime = new Date();
         if (StringUtils.isEmpty(trip.getUuid())) {
-            
-            trip.setUuid(UUID.randomUUID().toString());
+
+            trip.setUuid(UUID.randomUUID().toString().replace("-", ""));
             trip.setCreatedUserId("TESTUSER1001");
             trip.setCreatedDatetime(curTime);
             trip.setUpdatedUserId("TESTUSER1001");
