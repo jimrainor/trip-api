@@ -11,7 +11,10 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+    <resourceDirectory>src/main/resources</resourceDirectory>
   </properties>
 
   <parent>
@@ -42,12 +45,30 @@
     </dependency>
   </dependencies>
   <build>
+  <resources>
+    <resource>
+      <directory>${resourceDirectory}</directory>
+      <excludes>
+        <exclude>config/**/*.*</exclude>
+        <exclude>env/**/*.*</exclude>
+      </excludes>
+    </resource>
+    <resource>
+      <directory>${resourceDirectory}/config/lang</directory>
+    </resource>
+    <resource>
+      <directory>${resourceDirectory}/config/logging</directory>
+    </resource>
+    <resource>
+      <directory>${resourceDirectory}/env</directory>
+    </resource>
+  </resources>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
-    <finalName>trip</finalName>
+    <finalName>trip-api</finalName>
   </build>
 </project>

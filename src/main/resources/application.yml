@@ -8,6 +8,9 @@ spring:
    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
    username: postgres
    password: noah2001
+   #url: jdbc:postgresql://10.20.0.46:5432/KNPS?currentSchema=developx
+   #username: dbuser
+   #password: dbuser 
    driverClassName: org.postgresql.Driver
 
 logging:
